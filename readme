@@ -1,0 +1,190 @@
+# Concurrent Log Analytics Engine
+
+A high-performance log processing and analytics system built using **C++17**. The engine processes large log datasets concurrently using asynchronous task execution, extracts insights through regex-based parsing, and generates statistical reports through a modular and scalable architecture.
+
+## 🚀 Features
+
+- Concurrent log processing using `std::async` and `std::future`
+- Parallel workload distribution for improved performance
+- Regex-based log parsing and analysis
+- Statistical aggregation of log data
+- Modular object-oriented architecture
+- Robust file handling and exception management
+- Automated report generation
+- Modern C++17 implementation
+
+---
+
+## 🏗️ Architecture
+
+```text
+                +------------------+
+                |     main.cpp     |
+                +--------+---------+
+                         |
+                         v
+                +------------------+
+                |   LogAnalyzer    |
+                +--------+---------+
+                         |
+         +---------------+---------------+
+         |                               |
+         v                               v
++------------------+          +------------------+
+|   ThreadWorker   |          |    Statistics    |
+| Log Processing   |          | Data Aggregation |
++------------------+          +------------------+
+         |
+         v
++------------------+
+| ReportGenerator  |
++------------------+
+```
+
+### Components
+
+#### LogAnalyzer
+- Reads log files
+- Splits data into chunks
+- Launches asynchronous tasks
+- Aggregates worker results
+
+#### ThreadWorker
+- Processes log chunks
+- Performs regex-based parsing
+- Extracts and categorizes log entries
+
+#### Statistics
+- Stores analytics metrics
+- Merges results from workers
+- Maintains aggregated statistics
+
+#### ReportGenerator
+- Generates summarized reports
+- Displays analysis results
+
+---
+
+## 🛠️ Technologies Used
+
+- C++17
+- STL Containers
+  - `std::vector`
+  - `std::unordered_map`
+  - `std::string`
+- Multithreading
+  - `std::async`
+  - `std::future`
+- Regular Expressions (`std::regex`)
+- File I/O
+- Object-Oriented Programming
+- Exception Handling
+
+---
+
+## 📚 C++ Concepts Demonstrated
+
+### Modern C++
+- `constexpr`
+- `auto`
+- Range-based loops
+- STL containers and algorithms
+
+### Concurrency
+- Asynchronous task execution
+- Future-based synchronization
+- Parallel workload processing
+
+### Object-Oriented Programming
+- Encapsulation
+- Modular design
+- Separation of concerns
+
+### Error Handling
+- Exception-based fault management
+- Runtime validation
+
+### Data Processing
+- Regex pattern matching
+- File parsing
+- Statistical aggregation
+
+---
+
+## ⚙️ Build Instructions
+
+### Linux / macOS
+
+```bash
+g++ -std=c++17 -pthread *.cpp -o LogAnalyticsEngine
+```
+
+### Windows (MinGW)
+
+```bash
+g++ -std=c++17 -pthread *.cpp -o LogAnalyticsEngine.exe
+```
+
+### Run
+
+```bash
+./LogAnalyticsEngine
+```
+
+Windows:
+
+```bash
+LogAnalyticsEngine.exe
+```
+
+---
+
+## 📈 Workflow
+
+1. Load log file
+2. Divide logs into chunks
+3. Launch asynchronous worker tasks
+4. Parse log entries using regex
+5. Aggregate statistics
+6. Generate analytical reports
+
+---
+
+## 🎯 Use Cases
+
+- Application log monitoring
+- Server log analysis
+- Error tracking and diagnostics
+- Performance monitoring
+- System health analysis
+
+---
+
+## 🔮 Future Enhancements
+
+- Thread Pool implementation
+- Real-time log monitoring
+- JSON/CSV export support
+- Smart pointer integration
+- Support for multiple log formats
+- Interactive dashboard
+- Advanced filtering and querying
+
+---
+
+## 💼 Resume Highlights
+
+- Developed a concurrent log analytics engine in C++17 using asynchronous task execution.
+- Implemented parallel log processing with `std::async` and `std::future`.
+- Applied STL containers, regex parsing, file handling, and object-oriented design principles.
+- Designed a scalable architecture for efficient log analysis and report generation.
+
+---
+
+## 👨‍💻 Author
+
+**Sai Ganesh Pampana**
+
+Final Year B.Tech (Computer Science Engineering)
+
+Interests: C++ | Embedded Systems | RTOS | Automotive Software Development

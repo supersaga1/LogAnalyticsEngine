@@ -1,0 +1,21 @@
+====================================
+      LOG ANALYSIS REPORT
+====================================
+
+Total Lines : 5
+INFO Count : 1
+WARNING Count : 1
+ERROR Count : 3
+
+Error Rate : 60 %
+
+Top Recurring Errors
+---------------------
+Database Connection Failed : 2
+Network Timeout : 1
+
+Most Frequent Error
+-------------------
+Database Connection Failed (2 occurrences)
+
+====================================
